@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Program in Quantitative Finance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .announcement {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 5px solid #3498db;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #e17055;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .unique-features {
+            background: linear-gradient(135deg, #dcedc8 0%, #c8e6c9 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #66bb6a;
+        }
+
+        .target-audience {
+            background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #29b6f6;
+        }
+
+        .pricing {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #ff9800;
+        }
+
+        .module {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #ab47bc;
+        }
+
+        .instructor {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #4caf50;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 20px 0 15px 0;
+            font-size: 1.4em;
+        }
+
+        h4 {
+            color: #2c3e50;
+            margin: 15px 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .policies-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #6c757d;
+        }
+
+        .policy-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .policy-tab {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px 25px 0 0;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .policy-tab:hover {
+            background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+            transform: translateY(-2px);
+        }
+
+        .policy-tab.active {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            border-bottom: 3px solid #007bff;
+            transform: translateY(-2px);
+        }
+
+        .policy-content {
+            display: none;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+
+        .policy-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .policy-text {
+            line-height: 1.7;
+        }
+
+        .policy-text h4 {
+            color: #2c3e50;
+            margin: 20px 0 10px 0;
+            font-size: 1.1em;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 5px;
+        }
+
+        .policy-text p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .policy-text .warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            font-weight: 500;
+            color: #856404;
+        }
+
+        .policy-text a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .policy-text a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-tabs {
+                flex-direction: column;
+            }
+
+            .policy-tab {
+                border-radius: 25px;
+                margin-bottom: 5px;
+            }
+
+            .policies-section {
+                padding: 20px;
+            }
+        }
+
+    </style>
+    <script>
+        function showPolicy(policyId) {
+            // Hide all policy contents
+            const contents = document.querySelectorAll('.policy-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.policy-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected policy content
+            document.getElementById(policyId).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Quantie Institute of Advance Studies</h1>
+            (A Private Limited Company)<br>
+            <p class="subtitle">"Learn like a quant, think like a trader, build like an engineer"</p>
+        </div>
+
+        <div class="content">
+            <div>
+                <h2>Certificate Program in Quantitative Finance</h2>
+            </div>
+            <div class="announcement">
+                <h2>🎓 Upcoming Program Announcement</h2>
+                <p>We are excited to announce a <strong>rigorous and industry-aligned one-year online Certificate Program in Quantitative Finance</strong>, carefully curated to meet the growing global demand for quantitative analysts, risk modelers, algorithmic traders, and financial engineers.</p>
+                
+                <p>This program has been thoughtfully curated to bridge the gap between theoretical foundations and real-world applications, meeting the growing global demand for skilled professionals in Quantitative Finance.</p>
+                
+                <p>Whether you're a recent graduate or a working professional, this program offers a compelling alternative for those who may have missed out on admission to top Western institutions—delivering world-class content at an affordable cost, tailored to the Indian and global context.</p>
+            </div>
+
+            <div class="unique-features">
+                <h2>🌟 This Program is Unique In Its:</h2>
+                <ul>
+                    <li><strong>Emphasis on mathematical depth and theoretical clarity</strong></li>
+                    <li><strong>Intensive Python-based implementation</strong></li>
+                    <li><strong>First-two months will be spent on Mathematics and Python Primer</strong></li>
+                    <li><strong>Coverage of real-world financial modeling problems</strong></li>
+                    <li><strong>Access to updated content and recorded delivery for flexible, lifelong learning</strong></li>
+                    <li><strong>Affordability compared to international programs</strong></li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>📅 Program Details</h3>
+                <ul>
+                    <li><strong>Program Duration:</strong> 12 Months or less</li>
+                    <li><strong>Schedule:</strong> Evening hours IST (GMT+5:30) on weekends, occasionally on weekdays</li>
+                    <li><strong>Delivery Mode:</strong> 100% Online (recorded sessions)</li>
+                    <li><strong>Access:</strong> Global Access | Affordable Pricing | Lifetime Lecture Access</li>
+                </ul>
+            </div>
+
+            <div class="target-audience">
+                <h2>🎯 Target Audience</h2>
+                <p>This course is ideal for:</p>
+                <ul>
+                    <li><strong>Finance professionals</strong> transitioning into quantitative roles such as risk modeling, algorithmic trading, or quantitative research</li>
+                    <li><strong>Engineers, statisticians, physicists, and mathematicians</strong> applying analytical and programming skills to financial problems</li>
+                    <li><strong>IT, software, and data science professionals</strong> moving into financial analytics, fintech, or building quant-based platforms</li>
+                    <li><strong>MBA students, CFA/FRM candidates, and investment professionals</strong> looking to enhance their quantitative and coding toolkit</li>
+                    <li><strong>Academics, researchers, and postgraduates</strong> exploring quantitative methods in asset management, derivatives pricing, and financial modeling</li>
+                    <li><strong>Entrepreneurs and fintech founders</strong> developing data-driven finance solutions</li>
+                    <li><strong>Global learners</strong> seeking an academically rigorous yet affordable alternative to traditional Western business school programs</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>📝 Application of Interest</h3>
+                <p>Interested candidates can express their interest by completing the form below:</p>
+                <a href="https://forms.gle/Rp9Pdj31hDHCKwFJ6" class="cta-button" target="_blank">Apply Now</a>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🚀 Start Date</h3>
+                <p><strong>Saturday Aug 09, 2025 08:00 AM to 09:00 AM IST</strong> - Inauguration</p>
+                <p><strong>General Class Timing:</strong> 05:00 PM or 06:00 PM — 9:00 PM IST (3-to-4-hour classes)</p>
+                <p>Classes will generally be held on weekends but sometimes on weekdays.</p>
+                <p><strong>IST (India Standard Time):</strong> GMT+05:30</p>
+            </div>
+
+            <div class="pricing">
+                <h2>💰 Program Fees</h2>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h4>🇮🇳 For Indian Candidates</h4>
+                        <ul>
+                            <li><strong>Fee:</strong> INR 1,99,995</li>
+                            <li><strong>Payment Schedule:</strong> Payable in four equal installments over the first four consecutive months</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>🌍 For International Candidates</h4>
+                        <ul>
+                            <li><strong>Fee:</strong> USD 5,010</li>
+                            <li><strong>Early Bird Discount:</strong> 10% discount for the first five enrollments</li>
+                            <li><strong>Payment Schedule:</strong> Payable in five equal installments over the first five consecutive months</li>
+                            <li><strong>Special Consideration:</strong> 20% discount might be considered for underdeveloped (not developing) country applicants. This is subject to consideration.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p><strong>Note:</strong> Fees are subject to revision. Fee once paid will not be returned. The first installment must be paid a month in advance (i.e., in July) so that I can confirm the number of enrolled participants.</p>
+            </div>
+
+            <div class="module">
+                <h2>📚 Course Curriculum</h2>
+                
+                <h3>Module 0: Mathematics Primer</h3>
+                <p>Linear Algebra, Differential and Integral Calculus, Differential Equation, Probability and Statistics</p>
+                <p>A crash course will be provided in addition to self-guided revision.</p>
+                
+                <h3>Module 1: Data Science</h3>
+                <h4>1.1 Python Primer:</h4>
+                <p>Introduction to Python, Python Variables, Python Data Types, Python Lists, Python Tuples, Python Sets, Python Dictionaries, Python If Else, Python Loops, Python Functions, Python Lambda, Introduction to NumPy, Advance Numpy, Introduction to Pandas, Matplotlib Tutorial, Matplotlib Practice, Data Visualization, 3D Interactive Plot, Stock Plot, File Handling, Directory Handling, Python Classes, Python Inheritance, Python Polymorphism, Python Iterators, Python RegEx</p>
+                
+                <h4>1.2 Time Series Analysis with Python</h4>
+                <p>Simple and Multivariate Linear Regression Assumptions and Derivation, Hypothesis Testing, Modeling Dummy Variables, Heteroskedasticity, Multicollinearity, Autocorrelation, Weighted OLS, Normality Test, Autoregressive (AR), Moving Average (MA), and Autoregressive Integrated Moving Average (ARIMA) Processes, Cointegrated Processes, Vector Autoregression (VAR), Generalized Autoregressive Conditional Heteroskedasticity (GARCH), EWMA Volatility, Parkinson (1980), Garman and Klass (1980), Rogers and Satchell (1991), Yang and Zhang (2000).</p>
+                
+                <h4>1.3 Machine Learning for Finance</h4>
+                <p>OLS, Lasso, Ridge, and Elastic-Net Regression, Logistic Regression, Decision Trees, Support Vector Machines (SVM), Ensemble Learning, Imbalanced Classification, Principal Component Analysis (PCA), Linear Discriminant Analysis (LDA), T-distributed Stochastic Neighbor Embedding (t-SNE), Self-Organizing Map, Clustering (K-Means, DBSCAN, Gaussian Mixtures), Feature Engineering, Hyperparameter Tuning and Model Optimization, Cross Validation, Pipeline Development</p>
+                
+                <h4>1.4 Deep Learning in Finance</h4>
+                <p>Introduction to Deep Learning Concepts, Multilayer Perceptron (MLP), Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), Long Short-Term Memory (LSTM) Networks, Gated Recurrent Unit (GRU) Networks, Hyperparameter Tuning, Activation Functions, Optimizers.</p>
+                
+                <h3>Module 2: Portfolio Optimization</h3>
+                <h4>2.1 Portfolio optimization</h4>
+                <p>Introduction to Portfolio Theory, Markowitz Mean-Variance Optimization, Efficient Frontier Analysis, Capital Allocation Line (CAL), Sharpe Ratio Maximization, Modern Portfolio Theory (MPT), Black-Litterman Model, Factor Models and Smart Beta Strategies, Risk Budgeting Portfolio, Risk Parity Portfolios, Minimum Variance Portfolios, Mean-Semivariance Optimization Mean-Downside Risk Optimization, Mean-Variance-Skewness Optimization, Mean-Variance-Skewness-Kurtosis Optimization Mean-VaR Optimization, Mean-Conditional VaR Optimization, Mean-Marginal VaR Optimization, Mean-Max Drawdown Optimization, Mean-Avg Drawdown Optimization, Multi-Period Portfolio Optimization, Dynamic Asset Allocation Strategies, Performance Measurement and Attribution, Monte Carlo Simulation for Portfolio Optimization, and other Optimization Techniques. Portfolio Risk: Risk Budgeting, Component VaR, Incremental VaR, Marginal VaR.</p>
+                
+                <h3>Module 3: Derivatives and Stochastic Calculus</h3>
+                <h4>3.1 Derivatives</h4>
+                <p>Introduction to Derivative Instruments, Put-Call Parity and Option Strategies, Black-Scholes Model, Binomial Option Pricing Model: European, American, and Asian Options, Convergence of Binomial Model to the Black-Scholes using both mathematics and Python, Trinomial Option Pricing Model: European and American Options, Greeks: Delta, Gamma, Theta, Vega and Rho, Implied Volatility and Volatility Smile</p>
+                
+                <h4>3.2 Stochastic Calculus</h4>
+                <p>Introduction to Stochastic Processes, Kolmogorov Forward and Backward Equation, Brownian Motion and Wiener Processes, Ito's Lemma and its Applications, Stochastic Differential Equations (SDEs), Martingale Theory and Martingale Representation Theorem, Girsanov's Theorem and Change of Measure, Stochastic Integration, Feynman-Kac Formula, Black-Scholes Equation and its Derivation, Risk-Neutral Pricing and the Fundamental Theorem of Asset Pricing. Stochastic Integration</p>
+                
+                <h3>Module 4: Numerical Methods and Stochastic Modeling</h3>
+                <h4>4.1 Numerical Methods</h4>
+                <p>Generating Random Numbers: Inverse Transform Approach, Acceptance Rejection Approach, Polar Method, Box-Muller Approach, Rational Approximation Method; Variance Reduction Method, Monte-Carlo Simulations for Option Pricing, Finite Difference Method: Explicit, Implicit, Crank-Nicolson for Option Pricing, Euler Discretization, Cholesky Decomposition, LU Decomposition, Simulation of Financial Processes, Implementation in Python.</p>
+                
+                <h4>4.2 Stochastic Modeling</h4>
+                <p>Maximum Likelihood Estimation, Monte Carlo Simulation, Cox-Ingersoll-Ross Model (CIR), Vasicek Model, Ho-Lee Model, Hull-White Model, Heston Model, Merton Jump Diffusion Model, SABR Model, Simulation-Based Pricing and Valuation, Stochastic Differential Equations (SDEs), Calibration Techniques, Volatility Surface Modeling, Interest Rate Models, Application in Derivatives Pricing, Risk Management, and Hedging Strategies, Local Volatility Models, Stochastic Volatility Models.</p>
+                
+                <h3>Module 5: Financial Risk</h3>
+                <h4>5.1 Market Risk</h4>
+                <p>Historical VaR, Parametric VaR, Monte Carlo VaR, VaR Mapping, Backtesting VaR, Expected Shortfall, Coherent Risk Measure, Stress Testing, Scenario Analysis, Sensitivity Analysis, Risk Aggregation, Liquidity Risk, Tail Risk, Regulatory Frameworks, Basel, FRTB, Stress Testing.</p>
+                
+                <h4>5.2 Credit Risk</h4>
+                <p>Credit Analysis, Default Risk, Credit Scoring Models, Expected and Unexpected Loss, Probability of Default (PD), Loss Given Default (LGD), Exposure at Default (EAD), Counterparty Risk, Credit Valuation Adjustment (CVA), Debit Value Adjustment (DVA), Credit Risk Mitigation Techniques, Credit Derivatives, Stress Testing, Rating Agencies.</p>
+                
+                <h3>Module 6: Fixed-Income and Credit Derivatives</h3>
+                <h4>6.1 Fixed-Income Securities</h4>
+                <p>Bond Valuation, Bond Price Sensitivities (Duration and Convexity with derivation), Bond Immunization (Cash Flow and Duration), Hedging, Asset-Liabilities Management, Callable and Putable Bonds, Yield Curve Strategies, Hedging and risk management of Bond Portfolio using Principal Components, Swaps, Forward Rate Agreements (FRAs), Securitization.</p>
+                
+                <h4>6.2 Credit Derivatives</h4>
+                <p>Swaps, Forward Rate Agreements (FRAs), Interest Rate Futures, Interest Rate Options, Cross Currency Swaps, Cross Currency Basis Swaps, Swaptions, Swaption Collar, Interest Rate Caps and Floors, Interest Rate Exotics, Credit Default Swaps (CDS), Credit-Linked Note, Variance Swaps.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>📊 Assessments</h3>
+                <ul>
+                    <li>Assignments after each module</li>
+                    <li>Capstone Project involving a real-world financial data-driven problem</li>
+                    <li>Encouraged to convert capstone projects into research papers; this is optional.</li>
+                </ul>
+            </div>
+
+            <div class="instructor">
+                <h2>👨‍🏫 Know About the Instructor</h2>
+                <h3>Dr. Akhielesh Prrasad</h3>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/akhpad/" target="_blank">https://www.linkedin.com/in/akhpad/</a></p>
+                <p><strong>Email:</strong> <a href="mailto:akhpad@gmail.com">akhpad@gmail.com</a></p>
+            </div>
+
+            <div class="contact-info">
+                <h2>📞 Contact and Resources</h2>
+                <ul>
+                    <li><strong>Website:</strong> <a href="https://quantie.in/" target="_blank">quantie.in</a></li>
+                    <li><strong>WhatsApp Group:</strong> <a href="https://chat.whatsapp.com/H7pg0YeGXux1xcrWeE7Ye8" target="_blank">Join Now</a></li>
+                    <li><strong>LinkedIn Page:</strong> <a href="https://www.linkedin.com/company/quantie-qf/" target="_blank">Click Here</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:quantie.qf@gmail.com">quantie.qf@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🔮 Future Programs</h3>
+                <p><strong>Stay tuned—</strong> In future a comprehensive Certificate Course on <strong>following areas</strong> are also expected to be announced:</p>
+                <ul>
+                    <li>Certificate Program on Data Science</li>
+                    <li>Certificate Program on Numerical Methods</li>
+                </ul>
+            </div>
+
+            <div class="policies-section">
+                <h2>📋 Policies & Information</h2>
+                
+                <div class="policy-tabs">
+                    <button class="policy-tab active" onclick="showPolicy('terms')">Terms & Conditions</button>
+                    <button class="policy-tab" onclick="showPolicy('privacy')">Privacy Policy</button>
+                    <button class="policy-tab" onclick="showPolicy('shipping')">Delivery Policy</button>
+                    <button class="policy-tab" onclick="showPolicy('contact')">Contact Us</button>
+                    <button class="policy-tab" onclick="showPolicy('cancellation')">Cancellation & Refund</button>
+                </div>
+
+                <div id="terms" class="policy-content active">
+                    <h3>Terms & Conditions</h3>
+                    <div class="policy-text">
+                        <h4>1. Program Enrollment</h4>
+                        <p>By enrolling in the Certificate Program in Quantitative Finance, you agree to abide by these terms and conditions. Enrollment is subject to acceptance by the program administrators.</p>
+                        
+                        <h4>2. Payment Terms</h4>
+                        <p>• All fees must be paid according to the specified payment schedule<br>
+                        • The first installment must be paid one month in advance (July 2025)<br>
+                        • Fees are subject to revision without prior notice<br>
+                        • Late payment may result in suspension of access to course materials</p>
+                        
+                        <h4>3. Course Content & Delivery</h4>
+                        <p>• All classes are conducted online via recorded sessions<br>
+                        • Course content is subject to updates based on industry relevance<br>
+                        • Lifetime access to recorded lectures is provided<br>
+                        • Technical requirements for accessing content are the student's responsibility</p>
+                        
+                        <h4>4. Student Responsibilities</h4>
+                        <p>• Maintain academic integrity in all assignments and assessments<br>
+                        • Respect intellectual property rights of course materials<br>
+                        • Participate actively in the learning process<br>
+                        • Complete assignments and projects within specified deadlines</p>
+                        
+                        <h4>5. Intellectual Property</h4>
+                        <p>All course materials, including but not limited to videos, presentations, assignments, and documentation, are the intellectual property of the program and its instructors. Unauthorized distribution or reproduction is strictly prohibited.</p>
+                        
+                        <h4>6. Limitation of Liability</h4>
+                        <p>The program organizers shall not be liable for any direct, indirect, incidental, or consequential damages arising from participation in the program or use of course materials.</p>
+                        
+                        <h4>7. Modification of Terms</h4>
+                        <p>These terms and conditions may be modified at any time. Students will be notified of any changes via email or through the course platform.</p>
+                    </div>
+                </div>
+
+                <div id="privacy" class="policy-content">
+                    <h3>Privacy Policy</h3>
+                    <div class="policy-text">
+                        <h4>1. Information Collection</h4>
+                        <p>We collect information that you provide directly to us, such as:</p>
+                        <p>• Personal identification information (name, email, phone number)<br>
+                        • Educational and professional background<br>
+                        • Payment information for course fees<br>
+                        • Communication preferences</p>
+                        
+                        <h4>2. Use of Information</h4>
+                        <p>We use your information to:</p>
+                        <p>• Provide course content and educational services<br>
+                        • Process payments and manage enrollments<br>
+                        • Communicate about course updates and announcements<br>
+                        • Improve our services and user experience</p>
+                        
+                        <h4>3. Information Sharing</h4>
+                        <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy or as required by law.</p>
+                        
+                        <h4>4. Data Security</h4>
+                        <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                        
+                        <h4>5. Cookies and Tracking</h4>
+                        <p>Our website may use cookies to enhance user experience. You can choose to disable cookies through your browser settings.</p>
+                        
+                        <h4>6. Third-Party Services</h4>
+                        <p>We may use third-party services for payment processing, email communication, and course delivery. These services have their own privacy policies.</p>
+                        
+                        <h4>7. Your Rights</h4>
+                        <p>You have the right to access, update, or delete your personal information. Contact us at quantie.qf@gmail.com for any privacy-related requests.</p>
+                    </div>
+                </div>
+
+                <div id="shipping" class="policy-content">
+                    <h3>Course Delivery Policy</h3>
+                    <div class="policy-text">
+                        <h4>1. Digital Delivery</h4>
+                        <p>This is a 100% online program. All course materials are delivered digitally through our learning management system.</p>
+                        
+                        <h4>2. Access Timeline</h4>
+                        <p>• Course access will be provided within 24-48 hours of payment confirmation<br>
+                        • Live session links will be shared 24 hours before each class<br>
+                        • Recorded sessions will be available within 24 hours after each live class</p>
+                        
+                        <h4>3. Technical Requirements</h4>
+                        <p>Students must have:</p>
+                        <p>• Stable internet connection (minimum 10 Mbps recommended)<br>
+                        • Computer or device capable of running Python and data analysis software<br>
+                        • Updated web browser for accessing course platform<br>
+                        • Email access for course communications</p>
+                        
+                        <h4>4. Course Materials</h4>
+                        <p>• All lecture recordings with lifetime access<br>
+                        • Downloadable course materials and assignments<br>
+                        • Python code examples and datasets<br>
+                        • Certificate upon successful completion</p>
+                        
+                        <h4>5. Physical Materials</h4>
+                        <p>No physical materials are shipped. All resources are provided digitally. If any physical certificate is requested, additional charges may apply.</p>
+                        
+                        <h4>6. International Students</h4>
+                        <p>The program is accessible globally. Course timings are in IST (GMT+5:30), but recorded sessions ensure flexibility for international participants.</p>
+                    </div>
+                </div>
+
+                <div id="contact" class="policy-content">
+                    <h3>Contact Us</h3>
+                    <div class="policy-text">
+                        <h4>📧 Email Support</h4>
+                        <p><strong>General Inquiries:</strong> quantie.qf@gmail.com<br>
+                        <strong>Instructor Contact:</strong> akhpad@gmail.com<br>
+                        <strong>Technical Support:</strong> quantie.qf@gmail.com</p>
+                        
+                        <h4>🌐 Online Resources</h4>
+                        <p><strong>Website:</strong> <a href="https://quantie.in/" target="_blank">quantie.in</a><br>
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/quantie-qf/" target="_blank">Quantie QF Company Page</a><br>
+                        <strong>Instructor LinkedIn:</strong> <a href="https://www.linkedin.com/in/akhpad/" target="_blank">Dr. Akhielesh Prrasad</a></p>
+                        
+                        <h4>💬 WhatsApp Support</h4>
+                        <p><strong>Community Group:</strong> <a href="https://chat.whatsapp.com/H7pg0YeGXux1xcrWeE7Ye8" target="_blank">Join WhatsApp Group</a><br>
+                        <em>For quick questions and community interaction</em></p>
+                        
+                        <h4>🕐 Response Time</h4>
+                        <p>• Email inquiries: 24-48 hours<br>
+                        • WhatsApp messages: 12-24 hours<br>
+                        • Technical support: 24-72 hours</p>
+                        
+                        <h4>📍 Office Hours</h4>
+                        <p>Virtual office hours are available on weekends from 2:00 PM to 4:00 PM IST. Schedule appointments via email.</p>
+                        
+                        <h4>🎓 Academic Support</h4>
+                        <p>For academic queries, assignment help, and course content clarification, contact Dr. Akhielesh Prrasad directly at akhpad@gmail.com</p>
+                        
+                        <h4>📋 Application Support</h4>
+                        <p>For application assistance, use the form: <a href="https://forms.gle/Rp9Pdj31hDHCKwFJ6" target="_blank">Application Form</a></p>
+                    </div>
+                </div>
+
+                <div id="cancellation" class="policy-content">
+                    <h3>Cancellation & Refund Policy</h3>
+                    <div class="policy-text">
+                        <h4>⚠️ Important Notice</h4>
+                        <p class="warning"><strong>Fees once paid will not be returned.</strong> Please read this policy carefully before making any payment.</p>
+                        
+                        <h4>1. No Refund Policy</h4>
+                        <p>All payments made toward the Certificate Program in Quantitative Finance are non-refundable. This includes:</p>
+                        <p>• Initial enrollment fees<br>
+                        • Installment payments<br>
+                        • Early bird discounts<br>
+                        • Special consideration discounts</p>
+                        
+                        <h4>2. Cancellation Before Program Start</h4>
+                        <p>If you need to cancel your enrollment before the program begins (before August 9, 2025):</p>
+                        <p>• No refund will be provided<br>
+                        • You may transfer your enrollment to a future cohort (if available)<br>
+                        • Transfer requests must be made at least 7 days before program start</p>
+                        
+                        <h4>3. Cancellation After Program Start</h4>
+                        <p>Once the program has commenced:</p>
+                        <p>• No cancellations or refunds are permitted<br>
+                        • Students will retain access to materials already provided<br>
+                        • Lifetime access to recorded content remains valid</p>
+                        
+                        <h4>4. Medical/Emergency Circumstances</h4>
+                        <p>In case of severe medical emergencies or exceptional circumstances:</p>
+                        <p>• Documentation must be provided<br>
+                        • Requests will be reviewed on a case-by-case basis<br>
+                        • Transfer to future cohort may be considered instead of refund</p>
+                        
+                        <h4>5. Payment Failure</h4>
+                        <p>If installment payments are not made as per schedule:</p>
+                        <p>• Access to new content may be suspended<br>
+                        • Previously paid amounts are non-refundable<br>
+                        • Reinstatement possible upon payment of dues</p>
+                        
+                        <h4>6. Program Cancellation by Organizers</h4>
+                        <p>In the unlikely event that the program is cancelled by the organizers:</p>
+                        <p>• Full refund will be provided<br>
+                        • Alternative program options will be offered<br>
+                        • Advance notice of at least 30 days will be given</p>
+                        
+                        <h4>7. Disputes</h4>
+                        <p>Any disputes regarding payments or refunds will be subject to the jurisdiction of Indian courts and governed by Indian law.</p>
+                        
+                        <h4>8. Contact for Queries</h4>
+                        <p>For any questions regarding this policy, contact: quantie.qf@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Disclaimer:</strong> Content subject to be updated based on industry relevance</p>
+        </div>
+    </div>
+</body>
+</html>
